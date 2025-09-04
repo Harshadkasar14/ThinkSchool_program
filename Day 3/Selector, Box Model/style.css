@@ -1,0 +1,81 @@
+/* ================================
+   CSS Fundamentals Demo
+   Demonstrates:
+   - Selectors
+   - Box Model
+   - Cascade & Specificity
+=============================== */
+
+/* Body selector - element selector */
+/* Box model: margin; inheritance: font-family, line-height */
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;           
+  line-height: 1.5;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* h1 selector - element selector */
+/* Box model: margin */
+h1 {
+  text-align: center;
+  color: darkblue;
+  margin-bottom: 1rem;
+}
+
+/* Section - element selector */
+section {
+  width: 80%;             
+  max-width: 600px;
+  padding: 1rem;          
+  margin: 0 auto 2rem;    
+  border: 2px solid #ccc; 
+  background-color: #f9f9f9;
+  box-sizing: border-box;  
+}
+
+/* h2 selector - ID selector specificity example */
+#section-title {
+  color: green;          
+}
+
+/* Box div - class selector */
+/* Box model: width, padding, margin, border */
+.box {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 2px solid #888;
+  background-color: #e0f7fa;
+  box-sizing: border-box;
+}
+
+/* Paragraph inside box - element inside class (specificity) */
+.box p {
+  margin: 0;
+  color: #333;  /* inherited font from body */
+}
+
+/* Paragraph with additional class - demonstrates specificity */
+.text {
+  color: darkred;          
+  font-weight: bold;
+}
+
+/* Button - element selector */
+/* Box model: width, padding, margin, border */
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid #555;
+  background-color: azure;
+  cursor: pointer;
+}
+
+/* Button hover - pseudo-class selector */
+button:hover {
+  background-color: lightblue; 
+}
