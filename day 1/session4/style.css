@@ -1,0 +1,110 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 2px;
+}
+
+h1, h2, h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.navabar {
+  margin-top: 20px;
+}
+
+.navabar section {
+  margin-top: 20px;
+}
+
+.navabar h1 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #0077b6;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+.career{
+  border-bottom: 2px solid #0077b6;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.techlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.techlist ul {
+  background: #e7f5ff;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: #023e8a;
+  transition: 0.3s;
+}
+
+.techlist ul:hover {
+  background: #0077b6;
+  color: white;
+}
+li{
+  margin-bottom: 8px;
+  list-style:none
+}
+
+#contact a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact h2{
+  border-bottom: 2px solid #0077b6;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  background: #023e8a;
+  color: #fff;
+  border-radius: 6px;
+}
