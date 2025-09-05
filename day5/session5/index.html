@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Polish: Transitions & Responsive Images</title>
+  <link rel="stylesheet" href="components.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>CSS Polish: Button, Cards & Responsive Images</h1>
+
+    <!-- BUTTON                -->
+    <section>
+      <button class="button">Click Me</button>
+    </section>
+
+    <!-- CARDS                 -->
+    <section>
+      <h2>Interactive Cards</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Hover to see lift and shadow effect.</p>
+        </div>
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Smooth micro-interactions on hover.</p>
+        </div>
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Another example of card transition effect.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESPONSIVE IMAGES     -->
+    <section>
+      <h2>Responsive Images</h2>
+      <div class="grid">
+        <img 
+          src="images/image1.jpg"
+          srcset="images/image1.jpg 400w, images/image1.jpg 800w, images/image1.jpg 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="Image 1"
+          class="img-hover"
+        >
+        <img 
+          src="images/image2.jpg"
+          srcset="images/image2.jpg 400w, images/image2.jpg 800w, images/image2.jpg 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="Image 2"
+          class="img-hover"
+        >
+        <img 
+          src="images/image3.jpg"
+          srcset="images/image3.jpg 400w, images/image3.jpg 800w, images/image3.jpg 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="Image 3"
+          class="img-hover"
+        >
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
