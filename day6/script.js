@@ -1,7 +1,14 @@
-// Full data for HTML
+// Full data for HTML, CSS, and JavaScript 
 const data = {
   HTML: {
-    "Semantic Elements": [
+    "Text / Headings": [
+    { word: "<h1> to <h6>", desc: "Heading tags from largest to smallest", code: "<h1>Heading 1</h1>" },
+    { word: "<p>", desc: "Paragraph of text", code: "<p>This is a paragraph.</p>" },
+    { word: "<span>", desc: "Inline text container", code: "<span>Inline text</span>" },
+    { word: "<strong>", desc: "Important/bold text", code: "<strong>Bold text</strong>" },
+    { word: "<em>", desc: "Emphasized text", code: "<em>Italic text</em>" }
+  ],
+  "Semantic Elements": [
       { word: "<header>", desc: "Represents the header of a page or section. Usually contains logo, navigation, or heading.", code: "<header>\n  <h1>Site Title</h1>\n  <nav>Navigation here</nav>\n</header>" },
       { word: "<nav>", desc: "Defines a section of navigation links.", code: "<nav>\n  <a href='#home'>Home</a>\n  <a href='#about'>About</a>\n</nav>" },
       { word: "<main>", desc: "Represents the main content of the page.", code: "<main>\n  <h2>Main Content</h2>\n  <p>This is the main area.</p>\n</main>" },
@@ -20,9 +27,66 @@ const data = {
     "Non-Semantic Elements": [
       { word: "<div>", desc: "Generic block-level container with no semantic meaning.", code: "<div class='container'>Content</div>" },
       { word: "<span>", desc: "Generic inline container with no semantic meaning.", code: "<p>Hello <span class='highlight'>World</span></p>" }
-    ]
+    ],
+  "Links": [
+    { word: "<a>", desc: "Anchor / hyperlink", code: "<a href='https://example.com'>Visit</a>" }
+  ],
+
+  "Images / Media": [
+    { word: "<img>", desc: "Image element", code: "<img src='image.jpg' alt='Description'>" },
+    { word: "<video>", desc: "Video element", code: "<video controls src='video.mp4'></video>" },
+    { word: "<audio>", desc: "Audio element", code: "<audio controls src='audio.mp3'></audio>" }
+  ],
+
+  "Lists": [
+    { word: "<ul>", desc: "Unordered list", code: "<ul><li>Item 1</li><li>Item 2</li></ul>" },
+    { word: "<ol>", desc: "Ordered list", code: "<ol><li>Item 1</li><li>Item 2</li></ol>" },
+    { word: "<li>", desc: "List item", code: "<li>Item</li>" }
+  ],
+
+  "Forms / Inputs": [
+    { word: "<form>", desc: "Form container", code: "<form action='#'><input type='text'></form>" },
+    { word: "<input>", desc: "Input field", code: "<input type='text' placeholder='Enter text'>" },
+    { word: "<textarea>", desc: "Multi-line input", code: "<textarea>Type here</textarea>" },
+    { word: "<button>", desc: "Clickable button", code: "<button>Click me</button>" },
+    { word: "<label>", desc: "Label for input", code: "<label for='name'>Name:</label>" },
+    { word: "<select>", desc: "Dropdown select", code: "<select><option>Option 1</option></select>" },
+    { word: "<option>", desc: "Option inside select", code: "<option>Option 1</option>" }
+  ],
+
+  "Tables": [
+    { word: "<table>", desc: "Table container", code: "<table><tr><td>Data</td></tr></table>" },
+    { word: "<tr>", desc: "Table row", code: "<tr><td>Data</td></tr>" },
+    { word: "<td>", desc: "Table cell", code: "<td>Data</td>" },
+    { word: "<th>", desc: "Table header cell", code: "<th>Header</th>" },
+    { word: "<thead>", desc: "Table header section", code: "<thead><tr><th>Header</th></tr></thead>" },
+    { word: "<tbody>", desc: "Table body section", code: "<tbody><tr><td>Data</td></tr></tbody>" },
+    { word: "<tfoot>", desc: "Table footer section", code: "<tfoot><tr><td>Footer</td></tr></tfoot>" }
+  ],
+
+  "Other": [
+    { word: "<div>", desc: "Generic block container", code: "<div>Content</div>" },
+    { word: "<br>", desc: "Line break", code: "<p>Line1<br>Line2</p>" },
+    { word: "<hr>", desc: "Horizontal rule / line", code: "<hr>" },
+    { word: "<meta>", desc: "Metadata for the document", code: "<meta charset='UTF-8'>" },
+    { word: "<link>", desc: "Link external resource (like CSS)", code: "<link rel='stylesheet' href='style.css'>" },
+    { word: "<script>", desc: "Include JavaScript", code: "<script src='app.js'></script>" }
+  ]
   },
      CSS: {
+      "Background": [
+    { word: "background-color", desc: "Sets background color", code: "div { background-color: #f0f0f0; }" },
+    { word: "background-image", desc: "Sets background image", code: "div { background-image: url('image.jpg'); }" },
+    { word: "background-size", desc: "Adjusts size of background", code: "div { background-size: cover; }" },
+    { word: "background-repeat", desc: "Repeat background or not", code: "div { background-repeat: no-repeat; }" }
+  ],
+  "Text": [
+    { word: "color", desc: "Text color", code: "p { color: #333; }" },
+    { word: "font-size", desc: "Size of text", code: "p { font-size: 16px; }" },
+    { word: "font-weight", desc: "Boldness of text", code: "p { font-weight: bold; }" },
+    { word: "text-align", desc: "Aligns text horizontally", code: "p { text-align: center; }" },
+    { word: "line-height", desc: "Spacing between lines", code: "p { line-height: 1.5; }" }
+  ],
     "Flexbox": [
       { word: "display:flex", desc: "Turns container into flexbox", code: ".container { display: flex; }" },
       { word: "justify-content", desc: "Aligns items horizontally", code: ".container { justify-content: center; }" },
@@ -37,12 +101,16 @@ const data = {
   JavaScript: {
     "Variables": [
       { word: "let", desc: "Block scoped variable", code: "let name = 'Harshad';" },
-      { word: "const", desc: "Constant variable", code: "const pi = 3.14;" }
+      { word: "const", desc: "Constant variable", code: "const pi = 3.14;" },
+      { word: "var", desc: "Global scoped variable", code: "var x= 16;" }
     ],
-    "Control Flow": [
-      { word: "if/else", desc: "Conditional statement", code: "if (x > 5) { } else { }" },
-      { word: "for loop", desc: "Iterates over values", code: "for (let i=0; i<5; i++) {}" }
-    ],
+     "jsLoops" : [
+  { word: "for loop", desc: "Iterates over values a specific number of times", code: "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}" },
+  { word: "while loop", desc: "Executes a block as long as condition is true", code: "let i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}" },
+  { word: "do while loop", desc: "Executes block at least once, then checks condition", code: "let i = 0;\ndo {\n  console.log(i);\n  i++;\n} while (i < 5);" },
+  { word: "for...in loop", desc: "Iterates over object keys", code: "const obj = {a:1, b:2};\nfor (let key in obj) {\n  console.log(key, obj[key]);\n}" },
+  { word: "for...of loop", desc: "Iterates over iterable values (arrays, strings, etc.)", code: "const arr = [10, 20, 30];\nfor (let value of arr) {\n  console.log(value);\n}" }
+],
     "Functions": [
       { word: "function", desc: "Reusable block of code", code: "function greet(){ console.log('Hi'); }" }
     ]
