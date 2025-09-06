@@ -78,25 +78,64 @@ const data = {
     { word: "background-color", desc: "Sets background color", code: "div { background-color: #f0f0f0; }" },
     { word: "background-image", desc: "Sets background image", code: "div { background-image: url('image.jpg'); }" },
     { word: "background-size", desc: "Adjusts size of background", code: "div { background-size: cover; }" },
-    { word: "background-repeat", desc: "Repeat background or not", code: "div { background-repeat: no-repeat; }" }
+    { word: "background-repeat", desc: "Repeat background or not", code: "div { background-repeat: no-repeat; }" },
+    { word: "background-position", desc: "Position of background image", code: "div { background-position: center; }" }
   ],
+
   "Text": [
     { word: "color", desc: "Text color", code: "p { color: #333; }" },
     { word: "font-size", desc: "Size of text", code: "p { font-size: 16px; }" },
     { word: "font-weight", desc: "Boldness of text", code: "p { font-weight: bold; }" },
     { word: "text-align", desc: "Aligns text horizontally", code: "p { text-align: center; }" },
-    { word: "line-height", desc: "Spacing between lines", code: "p { line-height: 1.5; }" }
+    { word: "line-height", desc: "Spacing between lines", code: "p { line-height: 1.5; }" },
+    { word: "letter-spacing", desc: "Spacing between letters", code: "p { letter-spacing: 1px; }" },
+    { word: "text-transform", desc: "Change text case", code: "p { text-transform: uppercase; }" }
   ],
-    "Flexbox": [
-      { word: "display:flex", desc: "Turns container into flexbox", code: ".container { display: flex; }" },
-      { word: "justify-content", desc: "Aligns items horizontally", code: ".container { justify-content: center; }" },
-      { word: "align-items", desc: "Aligns items vertically", code: ".container { align-items: center; }" }
-    ],
-    "Box Model": [
-      { word: "margin", desc: "Outside spacing", code: "div { margin: 10px; }" },
-      { word: "padding", desc: "Inside spacing", code: "div { padding: 10px; }" },
-      { word: "border", desc: "Border around element", code: "div { border: 1px solid black; }" }
-    ]
+
+  "Flexbox": [
+    { word: "display:flex", desc: "Turns container into flexbox", code: ".container { display: flex; }" },
+    { word: "flex-direction", desc: "Direction of flex items", code: ".container { flex-direction: row; }" },
+    { word: "justify-content", desc: "Aligns items horizontally", code: ".container { justify-content: center; }" },
+    { word: "align-items", desc: "Aligns items vertically", code: ".container { align-items: center; }" },
+    { word: "flex-wrap", desc: "Allow items to wrap", code: ".container { flex-wrap: wrap; }" }
+  ],
+
+  "Box Model": [
+    { word: "margin", desc: "Outside spacing", code: "div { margin: 10px; }" },
+    { word: "padding", desc: "Inside spacing", code: "div { padding: 10px; }" },
+    { word: "border", desc: "Border around element", code: "div { border: 1px solid black; }" },
+    { word: "width", desc: "Width of element", code: "div { width: 200px; }" },
+    { word: "height", desc: "Height of element", code: "div { height: 100px; }" },
+    { word: "box-sizing", desc: "Include padding & border in width/height", code: "div { box-sizing: border-box; }" }
+  ],
+
+  "Grid": [
+    { word: "display:grid", desc: "Turns container into grid", code: ".grid { display: grid; }" },
+    { word: "grid-template-columns", desc: "Define columns", code: ".grid { grid-template-columns: 1fr 2fr; }" },
+    { word: "grid-template-rows", desc: "Define rows", code: ".grid { grid-template-rows: 100px 200px; }" },
+    { word: "gap", desc: "Spacing between grid items", code: ".grid { gap: 10px; }" },
+    { word: "justify-items", desc: "Align items horizontally in cell", code: ".grid { justify-items: center; }" },
+    { word: "align-items", desc: "Align items vertically in cell", code: ".grid { align-items: center; }" }
+  ],
+
+  "Positioning": [
+    { word: "position", desc: "Position element (static, relative, absolute, fixed, sticky)", code: "div { position: absolute; top: 10px; left: 10px; }" },
+    { word: "top / right / bottom / left", desc: "Offset from container", code: "div { top: 10px; left: 20px; }" },
+    { word: "z-index", desc: "Stacking order", code: "div { z-index: 10; }" }
+  ],
+
+  "Effects": [
+    { word: "transition", desc: "Smoothly animate property changes", code: "div { transition: all 0.3s ease; }" },
+    { word: "transform", desc: "Move, scale, rotate, skew", code: "div { transform: scale(1.1) rotate(10deg); }" },
+    { word: "box-shadow", desc: "Adds shadow", code: "div { box-shadow: 2px 2px 10px rgba(0,0,0,0.2); }" },
+    { word: "opacity", desc: "Transparency", code: "div { opacity: 0.8; }" }
+  ],
+
+  "Responsive": [
+    { word: "@media", desc: "Apply styles based on screen size", code: "@media screen and (max-width: 768px) { div { width: 100%; } }" },
+    { word: "max-width / min-width", desc: "Set responsive element sizes", code: "div { max-width: 100%; }" },
+    { word: "vw / vh / %", desc: "Responsive units", code: "div { width: 50vw; height: 50vh; }" }
+  ]
   },
   JavaScript: {
     "Variables": [
@@ -113,7 +152,56 @@ const data = {
 ],
     "Functions": [
       { word: "function", desc: "Reusable block of code", code: "function greet(){ console.log('Hi'); }" }
-    ]
+    ],
+    "Selectors": [
+    { word: "document.getElementById", desc: "Select element by ID", code: "const el = document.getElementById('myId');" },
+    { word: "document.querySelector", desc: "Select first matching element", code: "const el = document.querySelector('.myClass');" },
+    { word: "document.querySelectorAll", desc: "Select all matching elements", code: "const items = document.querySelectorAll('li');" },
+    { word: "document.getElementsByClassName", desc: "Select elements by class", code: "const els = document.getElementsByClassName('myClass');" },
+    { word: "document.getElementsByTagName", desc: "Select elements by tag name", code: "const els = document.getElementsByTagName('div');" }
+  ],
+
+  "Content Manipulation": [
+    { word: "innerHTML", desc: "Get or set HTML inside element", code: "el.innerHTML = '<p>Hello</p>';" },
+    { word: "textContent", desc: "Get or set text inside element", code: "el.textContent = 'Hello World';" },
+    { word: "value", desc: "Get or set input value", code: "input.value = 'Text';" }
+  ],
+
+  "Attributes": [
+    { word: "getAttribute", desc: "Get value of an attribute", code: "el.getAttribute('href');" },
+    { word: "setAttribute", desc: "Set value of an attribute", code: "el.setAttribute('src', 'image.jpg');" },
+    { word: "removeAttribute", desc: "Remove an attribute", code: "el.removeAttribute('class');" },
+    { word: "classList.add", desc: "Add a CSS class", code: "el.classList.add('active');" },
+    { word: "classList.remove", desc: "Remove a CSS class", code: "el.classList.remove('hidden');" },
+    { word: "classList.toggle", desc: "Toggle a CSS class", code: "el.classList.toggle('show');" }
+  ],
+
+  "Events": [
+    { word: "addEventListener", desc: "Attach event to element", code: "el.addEventListener('click', () => { alert('Clicked'); });" },
+    { word: "removeEventListener", desc: "Remove event from element", code: "el.removeEventListener('click', handler);" },
+    { word: "onclick", desc: "Attach click event directly", code: "el.onclick = () => { console.log('Clicked'); };" },
+    { word: "oninput", desc: "Input change event", code: "input.oninput = () => { console.log(input.value); };" }
+  ],
+
+  "DOM Manipulation": [
+    { word: "appendChild", desc: "Add child element", code: "parent.appendChild(child);" },
+    { word: "removeChild", desc: "Remove child element", code: "parent.removeChild(child);" },
+    { word: "replaceChild", desc: "Replace child element", code: "parent.replaceChild(newChild, oldChild);" },
+    { word: "createElement", desc: "Create new element", code: "const div = document.createElement('div');" },
+    { word: "cloneNode", desc: "Clone an element", code: "const clone = el.cloneNode(true);" }
+  ],
+
+  "Style & CSS": [
+    { word: "style.property", desc: "Set inline style", code: "el.style.color = 'red';" },
+    { word: "className", desc: "Set class name", code: "el.className = 'active';" }
+  ],
+
+  "Traversal": [
+    { word: "parentNode", desc: "Get parent element", code: "const parent = el.parentNode;" },
+    { word: "children", desc: "Get child elements", code: "const kids = el.children;" },
+    { word: "nextElementSibling", desc: "Next sibling element", code: "const next = el.nextElementSibling;" },
+    { word: "previousElementSibling", desc: "Previous sibling element", code: "const prev = el.previousElementSibling;" }
+  ]
   }
 };
 
@@ -193,3 +281,4 @@ const navLinks = document.getElementById("navLinks");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
+
