@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 1 - Simple Keyword Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Keyword Explorer</h1>
+    <ul class="nav-links">
+      <li><button class="tab-btn active" data-tab="HTML">HTML</button></li>
+      <li><button class="tab-btn" data-tab="CSS">CSS</button></li>
+      <li><button class="tab-btn" data-tab="JavaScript">JavaScript</button></li>
+    </ul>
+  </nav>
+
+  <!-- Layout -->
+  <div class="container">
+    <aside class="sidebar">
+      <h3 id="categoryTitle">HTML Keywords</h3>
+      <div id="keywordList"></div>
+    </aside>
+
+    <main class="content" id="detailSection">
+      <h2>Welcome 👋</h2>
+      <p>Click a keyword to see details.</p>
+    </main>
+  </div>
+
+  <footer>
+    <p>Session 1 • Harshad Kasar • © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
