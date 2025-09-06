@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keyword Explorer — Day 6</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page title -->
+  <header class="page-title">
+    <h1>HTML, CSS, JavaScript Elements Overview</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><button class="tab-btn active" data-tab="HTML">HTML</button></li>
+        <li><button class="tab-btn" data-tab="CSS">CSS</button></li>
+        <li><button class="tab-btn" data-tab="JavaScript">JavaScript</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 id="categoryTitle">HTML Tags</h3>
+      <input type="text" id="searchBox" placeholder="Search elements..." aria-label="Search keywords">
+      <div id="keywordList" class="keyword-list" role="list"></div>
+    </aside>
+
+    <!-- Details -->
+    <main class="content" id="detailSection" tabindex="0" aria-live="polite">
+      <h2>Welcome, Explore all common HTML, CSS, and JavaScript elements with examples and descriptions</h2>
+      <p>Select a group (e.g., Semantic Elements) to view all its tags or properties.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
